@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using static PampaDevs.Utils.Helpers.DateTimeHelper;
 
 namespace PampaDevs.BuildingBlocks.Domain
 {
@@ -8,7 +9,7 @@ namespace PampaDevs.BuildingBlocks.Domain
         protected Entity(TId id)
         {
             Id = id;
-            Created = DateTimeOffset.Now.UtcDateTime;
+            Created = NewDateTime();
         }
         [Key] public TId Id { get; protected set; }
         public DateTime Created { get; protected set; }
