@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{899900EE-0BDA-4AB9-9BD6-F172ACB7B167}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{41D864B3-1147-4E15-833C-D1092B136E31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Domain", "src\PampaDevs.BuildingBlocks.Domain\PampaDevs.BuildingBlocks.Domain.csproj", "{20F8DCBB-502C-4256-B54A-7142C5898C89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.Utils", "src\PampaDevs.Utils\PampaDevs.Utils.csproj", "{FB8A5DC0-BB13-416C-AD7F-56A09C2438DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Application", "src\PampaDevs.BuildingBlocks.Application\PampaDevs.BuildingBlocks.Application.csproj", "{383316DD-7B78-4159-AB9F-563242A37077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Infrastructure", "src\PampaDevs.BuildingBlocks.Infrastructure\PampaDevs.BuildingBlocks.Infrastructure.csproj", "{481E0D38-4606-4AEA-A7DB-21E5A9677F3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20F8DCBB-502C-4256-B54A-7142C5898C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F8DCBB-502C-4256-B54A-7142C5898C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F8DCBB-502C-4256-B54A-7142C5898C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F8DCBB-502C-4256-B54A-7142C5898C89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB8A5DC0-BB13-416C-AD7F-56A09C2438DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8A5DC0-BB13-416C-AD7F-56A09C2438DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8A5DC0-BB13-416C-AD7F-56A09C2438DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8A5DC0-BB13-416C-AD7F-56A09C2438DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383316DD-7B78-4159-AB9F-563242A37077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383316DD-7B78-4159-AB9F-563242A37077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383316DD-7B78-4159-AB9F-563242A37077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383316DD-7B78-4159-AB9F-563242A37077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{481E0D38-4606-4AEA-A7DB-21E5A9677F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481E0D38-4606-4AEA-A7DB-21E5A9677F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481E0D38-4606-4AEA-A7DB-21E5A9677F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481E0D38-4606-4AEA-A7DB-21E5A9677F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20F8DCBB-502C-4256-B54A-7142C5898C89} = {41D864B3-1147-4E15-833C-D1092B136E31}
+		{FB8A5DC0-BB13-416C-AD7F-56A09C2438DE} = {41D864B3-1147-4E15-833C-D1092B136E31}
+		{383316DD-7B78-4159-AB9F-563242A37077} = {41D864B3-1147-4E15-833C-D1092B136E31}
+		{481E0D38-4606-4AEA-A7DB-21E5A9677F3D} = {41D864B3-1147-4E15-833C-D1092B136E31}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F06FACF9-159B-45CE-82E4-58FB0AA62302}
+	EndGlobalSection
+EndGlobal
