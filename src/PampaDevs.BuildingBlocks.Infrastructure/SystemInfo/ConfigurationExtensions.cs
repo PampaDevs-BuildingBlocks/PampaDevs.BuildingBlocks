@@ -1,10 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
-using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace PampaDevs.BuildingBlocks.Infrastructure.SystemInfo
 {
