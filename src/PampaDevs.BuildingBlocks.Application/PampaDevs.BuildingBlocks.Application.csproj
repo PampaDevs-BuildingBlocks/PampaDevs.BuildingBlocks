@@ -2,15 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PampaDevs.BuildingBlocks.Domain\PampaDevs.BuildingBlocks.Domain.csproj" />
     <ProjectReference Include="..\PampaDevs.Utils\PampaDevs.Utils.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

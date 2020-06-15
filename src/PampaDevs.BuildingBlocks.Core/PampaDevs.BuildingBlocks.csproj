@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>0.0.1</Version>
+    <Authors>Felipe Almeida</Authors>
+    <Company>PampaDevs</Company>
+    <Product>PampaDevs.BuildingBlocks</Product>
+    <Description>To be defined.</Description>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/PampaDevs-BuildingBlocks</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PampaDevs-BuildingBlocks</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dotnet, architecture, solid, ddd, unitofwork, repository, infrastructure, bus, entity, dto, aggregateroot</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageId>PampaDevs.BuildingBlocks</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Application\PampaDevs.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Domain\PampaDevs.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Infrastructure.Bus\PampaDevs.BuildingBlocks.Infrastructure.Bus.csproj" />
+    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Infrastructure.Data\PampaDevs.BuildingBlocks.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Infrastructure\PampaDevs.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\PampaDevs.Utils\PampaDevs.Utils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

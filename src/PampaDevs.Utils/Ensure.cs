@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 
 namespace PampaDevs.Utils
 {
@@ -22,7 +23,7 @@ namespace PampaDevs.Utils
         public static void That(bool condition, string message = "")
         {
             That<Exception>(condition, message);
-        }
+        }        
 
         /// <summary>
         /// Ensures that the given expression is true

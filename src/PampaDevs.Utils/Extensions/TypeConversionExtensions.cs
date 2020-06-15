@@ -8,7 +8,7 @@ namespace PampaDevs.Utils.Extensions
     {
         [DebuggerStepThrough]
         public static T ConvertTo<T>(this string src)
-        {
+        {            
             try
             {
                 var converter = TypeDescriptor.GetConverter(typeof(T));
