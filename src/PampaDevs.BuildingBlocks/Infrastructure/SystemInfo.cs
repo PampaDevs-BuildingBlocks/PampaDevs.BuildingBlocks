@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace PampaDevs.BuildingBlocks.Infrastructure
 {
     public class SystemInfo
     {
-        public SystemInfo(string osArchitecture, string osDescription, string processArchitecture, string basePath, string appName, string assemplyVersion, string runtimeFramework, Dictionary<string, object> envs)
+        public SystemInfo(string osArchitecture, string osDescription, string processArchitecture, string basePath, string appName, string assemplyVersion, string runtimeFramework, Hashtable envs)
         {
             OSArchitecture = osArchitecture;
             OSDescription = osDescription;
@@ -23,6 +24,6 @@ namespace PampaDevs.BuildingBlocks.Infrastructure
         public string AppName { get; private set; }
         public string AssemplyVersion { get; private set; }
         public string RuntimeFramework { get; private set; }
-        public Dictionary<string, object> Envs { get; private set; }
+        public Hashtable Envs { get; private set; }
     }
 }
