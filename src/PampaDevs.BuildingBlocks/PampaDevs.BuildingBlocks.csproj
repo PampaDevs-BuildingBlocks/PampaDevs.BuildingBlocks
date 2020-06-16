@@ -5,10 +5,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Version>0.0.1</Version>
-    <Authors>Felipe Almeida</Authors>
+    <Authors>felipe-allmeida</Authors>
     <Company>PampaDevs</Company>
     <Product>PampaDevs.BuildingBlocks</Product>
-    <Description>To be defined.</Description>
+    <Description>BuildingBlocks for a .NET Application enforcing the use of S.O.L.I.D. and D.D.D. principles.</Description>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/PampaDevs-BuildingBlocks</PackageProjectUrl>
     <RepositoryUrl>https://github.com/PampaDevs-BuildingBlocks</RepositoryUrl>
@@ -19,19 +19,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Application\PampaDevs.BuildingBlocks.Application.csproj" />
-    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Domain\PampaDevs.BuildingBlocks.Domain.csproj" />
-    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Infrastructure.Bus\PampaDevs.BuildingBlocks.Infrastructure.Bus.csproj" />
-    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Infrastructure.Data\PampaDevs.BuildingBlocks.Infrastructure.Data.csproj" />
-    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Infrastructure\PampaDevs.BuildingBlocks.Infrastructure.csproj" />
-    <ProjectReference Include="..\PampaDevs.Utils\PampaDevs.Utils.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\..\LICENSE.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.5" />
+    <PackageReference Include="PampaDevs.Utils" Version="1.0.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
 </Project>

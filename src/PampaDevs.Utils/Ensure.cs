@@ -88,6 +88,17 @@ namespace PampaDevs.Utils
         }
 
         /// <summary>
+        /// Ensures given string is not null or empty
+        /// </summary>
+        /// <param name="value">String value to compare</param>
+        /// <param name="message">Message of the exception if value is null or empty</param>
+        /// <exception cref="System.Exception">string value is null or empty</exception>
+        public static void NotNullOrEmpty<TException>(string value, string message = "String cannot be null or empty") where TException : Exception
+        {
+            That<TException>(!string.IsNullOrEmpty(value), message);
+        }
+
+        /// <summary>
         /// Ensures given objects are equal
         /// </summary>
         /// <typeparam name="T">Type of objects to compare for equality</typeparam>
@@ -140,7 +151,7 @@ namespace PampaDevs.Utils
         /// <exception cref="System.Exception">
         ///     Thrown if collection is null, empty or not all values satisfies <paramref cref="predicate"/>
         /// </exception>
-        public static void Items<T>(IEnumerable<T> collection, Func<T, bool> predicate, string message = "")
+        public static void All<T>(IEnumerable<T> collection, Func<T, bool> predicate, string message = "")
         {
             That(collection != null && !collection.Any(x => !predicate(x)), message);
         }
