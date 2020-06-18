@@ -22,11 +22,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{4AA3598F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A49AFB46-EAD4-4BFE-8D9F-62EF66AEDE4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.Utils.Tests", "tests\PampaDevs.Utils.Tests\PampaDevs.Utils.Tests.csproj", "{7EA72026-A246-47AB-9273-D2D4385E7FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.Utils.Tests", "tests\PampaDevs.Utils.Tests\PampaDevs.Utils.Tests.csproj", "{7EA72026-A246-47AB-9273-D2D4385E7FDD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7ED356BB-92CA-4256-8C51-E83FBF4D5AA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Tests", "tests\PampaDevs.BuildingBlocks.Tests\PampaDevs.BuildingBlocks.Tests.csproj", "{F8303EBE-C813-4AA2-A3D3-35026C6ED301}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Tests", "tests\PampaDevs.BuildingBlocks.Tests\PampaDevs.BuildingBlocks.Tests.csproj", "{F8303EBE-C813-4AA2-A3D3-35026C6ED301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Identity", "src\PampaDevs.BuildingBlocks.Identity\PampaDevs.BuildingBlocks.Identity.csproj", "{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{F8303EBE-C813-4AA2-A3D3-35026C6ED301}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8303EBE-C813-4AA2-A3D3-35026C6ED301}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8303EBE-C813-4AA2-A3D3-35026C6ED301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{7EA72026-A246-47AB-9273-D2D4385E7FDD} = {A49AFB46-EAD4-4BFE-8D9F-62EF66AEDE4B}
 		{7ED356BB-92CA-4256-8C51-E83FBF4D5AA6} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
 		{F8303EBE-C813-4AA2-A3D3-35026C6ED301} = {7ED356BB-92CA-4256-8C51-E83FBF4D5AA6}
+		{6B3488E7-4D0A-4682-BBA8-649C2361FB7D} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F06FACF9-159B-45CE-82E4-58FB0AA62302}
