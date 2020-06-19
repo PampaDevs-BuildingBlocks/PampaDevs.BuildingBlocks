@@ -19,10 +19,12 @@ namespace PampaDevs.BuildingBlocks.Security.Jwt
         {
             get
             {
-                var claimsIdentity = new ClaimsIdentity();
-
-                claimsIdentity.AddClaims(_claims);
-                claimsIdentity.AddClaims(_identityTokenBuilder.Claims);
+                var claimsIdentity = new ClaimsIdentity(_claims);
+                
+                if (_identityTokenBuilder != null)
+                {
+                    claimsIdentity.AddClaims(_identityTokenBuilder.Claims);
+                }
 
                 return claimsIdentity;
             }
