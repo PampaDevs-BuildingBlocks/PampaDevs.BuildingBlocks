@@ -1,12 +1,11 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using System.Text;
 
-namespace PampaDevs.BuildingBlocks.Identity.Jwt
+namespace PampaDevs.BuildingBlocks.Security.Jwt
 {
     public class TokenBuilderService
     {
@@ -17,36 +16,27 @@ namespace PampaDevs.BuildingBlocks.Identity.Jwt
             _settings = options?.Value;
         }
 
-        public string BuildToken(Action<JwtTokenBuilder> options)
+        public string BuildToken(Action<JwtTokenBuilder<IdentityUser>> options)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_settings.SecretKey);
+            var securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_settings.SecretKey));
 
             var tokenBuilder = new JwtTokenBuilder();
 
             options?.Invoke(tokenBuilder);
-
+            
             var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
             {
                 Issuer = _settings.Issuer,
                 Audience = _settings.Audience,
-                Subject = CreateJwtClaims()
+                Subject = tokenBuilder.IdentityClaims,
+                IssuedAt = DateTime.UtcNow,
+                NotBefore = DateTime.UtcNow, 
+                Expires = DateTime.UtcNow.AddHours(_settings.Expiration),
+                SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature)
             });;
 
-        }
-
-        private ClaimsIdentity CreateJwtClaims()
-        {
-            var claims = new List<Claim>
-            {
-                new Claim(JwtRegisteredClaimNames.Sub, ""),
-                new Claim(JwtRegisteredClaimNames.Email, ""),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Nbf, ToUnixEpochDate(DateTime.UtcNow).ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(DateTime.UtcNow).ToString(), ClaimValueTypes.Integer64)
-            };
-
-            return new ClaimsIdentity(claims);
+            return tokenHandler.WriteToken(token);
         }
 
         private static long ToUnixEpochDate(DateTime date)

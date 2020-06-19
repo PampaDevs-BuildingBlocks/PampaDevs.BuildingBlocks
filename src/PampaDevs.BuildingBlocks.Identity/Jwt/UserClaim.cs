@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PampaDevs.BuildingBlocks.Identity.Jwt
+namespace PampaDevs.BuildingBlocks.Security.Jwt
 {
     public class UserClaim
     {
