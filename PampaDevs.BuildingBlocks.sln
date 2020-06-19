@@ -28,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7ED356BB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Tests", "tests\PampaDevs.BuildingBlocks.Tests\PampaDevs.BuildingBlocks.Tests.csproj", "{F8303EBE-C813-4AA2-A3D3-35026C6ED301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Identity", "src\PampaDevs.BuildingBlocks.Identity\PampaDevs.BuildingBlocks.Identity.csproj", "{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Security", "src\PampaDevs.BuildingBlocks.Identity\PampaDevs.BuildingBlocks.Security.csproj", "{6B3488E7-4D0A-4682-BBA8-649C2361FB7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
