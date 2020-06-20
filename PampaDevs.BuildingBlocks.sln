@@ -28,9 +28,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7ED356BB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Tests", "tests\PampaDevs.BuildingBlocks.Tests\PampaDevs.BuildingBlocks.Tests.csproj", "{F8303EBE-C813-4AA2-A3D3-35026C6ED301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Security.Jwt", "src\PampaDevs.BuildingBlocks.Security.Jwt\PampaDevs.BuildingBlocks.Security.Jwt.csproj", "{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Security.Jwt", "src\PampaDevs.BuildingBlocks.Security.Jwt\PampaDevs.BuildingBlocks.Security.Jwt.csproj", "{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Data.EntityFramework", "src\PampaDevs.BuildingBlocks.Data.EntityFramework\PampaDevs.BuildingBlocks.Data.EntityFramework.csproj", "{9DFF4C19-0012-4977-8F44-CAD4783A9713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Data.EntityFramework", "src\PampaDevs.BuildingBlocks.Data.EntityFramework\PampaDevs.BuildingBlocks.Data.EntityFramework.csproj", "{9DFF4C19-0012-4977-8F44-CAD4783A9713}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{477D96D1-54C4-40D8-ABA0-B0D87A710F49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebStore", "WebStore", "{9BD5600F-81C2-46B8-8850-5554EB62FE28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductCatalogService", "ProductCatalogService", "{3CA1FACB-7E41-4786-9799-08D69B4D3210}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.ProductCatalog.Domain", "samples\WebStore.ProductCatalog.Domain\WebStore.ProductCatalog.Domain.csproj", "{C114161B-1C3B-4886-96F2-4C4811E5EFC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.ProductCatalog.Api", "samples\WebStore.ProductCatalog.Api\WebStore.ProductCatalog.Api.csproj", "{4800A5AE-F16C-4F5D-9054-7CEFC9D802EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Bus", "src\PampaDevs.BuildingBlocks.Bus\PampaDevs.BuildingBlocks.Bus.csproj", "{463FC94B-B7AF-4D5A-AD8C-2976B1AF02E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +74,18 @@ Global
 		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C114161B-1C3B-4886-96F2-4C4811E5EFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C114161B-1C3B-4886-96F2-4C4811E5EFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C114161B-1C3B-4886-96F2-4C4811E5EFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C114161B-1C3B-4886-96F2-4C4811E5EFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4800A5AE-F16C-4F5D-9054-7CEFC9D802EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4800A5AE-F16C-4F5D-9054-7CEFC9D802EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4800A5AE-F16C-4F5D-9054-7CEFC9D802EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4800A5AE-F16C-4F5D-9054-7CEFC9D802EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{463FC94B-B7AF-4D5A-AD8C-2976B1AF02E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463FC94B-B7AF-4D5A-AD8C-2976B1AF02E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463FC94B-B7AF-4D5A-AD8C-2976B1AF02E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463FC94B-B7AF-4D5A-AD8C-2976B1AF02E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +101,11 @@ Global
 		{F8303EBE-C813-4AA2-A3D3-35026C6ED301} = {7ED356BB-92CA-4256-8C51-E83FBF4D5AA6}
 		{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
 		{9DFF4C19-0012-4977-8F44-CAD4783A9713} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
+		{9BD5600F-81C2-46B8-8850-5554EB62FE28} = {477D96D1-54C4-40D8-ABA0-B0D87A710F49}
+		{3CA1FACB-7E41-4786-9799-08D69B4D3210} = {9BD5600F-81C2-46B8-8850-5554EB62FE28}
+		{C114161B-1C3B-4886-96F2-4C4811E5EFC5} = {3CA1FACB-7E41-4786-9799-08D69B4D3210}
+		{4800A5AE-F16C-4F5D-9054-7CEFC9D802EF} = {3CA1FACB-7E41-4786-9799-08D69B4D3210}
+		{463FC94B-B7AF-4D5A-AD8C-2976B1AF02E0} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F06FACF9-159B-45CE-82E4-58FB0AA62302}

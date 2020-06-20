@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PampaDevs.BuildingBlocks.Bus\PampaDevs.BuildingBlocks.Bus.csproj" />
+    <ProjectReference Include="..\..\src\PampaDevs.BuildingBlocks.Data.EntityFramework\PampaDevs.BuildingBlocks.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\src\PampaDevs.BuildingBlocks\PampaDevs.BuildingBlocks.csproj" />
+  </ItemGroup>
+
+</Project>

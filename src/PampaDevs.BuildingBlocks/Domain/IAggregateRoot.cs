@@ -1,4 +1,4 @@
-﻿using PampaDevs.BuildingBlocks.Domain.Events;
+﻿using PampaDevs.BuildingBlocks.Bus;
 using System;
 using System.Collections.Generic;
 

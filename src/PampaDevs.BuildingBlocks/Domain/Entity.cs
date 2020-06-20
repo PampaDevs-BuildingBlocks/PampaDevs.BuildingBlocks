@@ -9,10 +9,15 @@ namespace PampaDevs.BuildingBlocks.Domain
         protected Entity(TId id)
         {
             Id = id;
-            Created = NewDateTime();
+            DateCreated = NewDateTime();
+
+            ValidateCreation();
         }
+
         [Key] public TId Id { get; protected set; }
-        public DateTime Created { get; protected set; }
-        public DateTime? Updated { get; protected set; }
+        public DateTime DateCreated { get; protected set; }
+        public DateTime? DateUpdated { get; protected set; }
+
+        protected abstract void ValidateCreation();
     }
 }

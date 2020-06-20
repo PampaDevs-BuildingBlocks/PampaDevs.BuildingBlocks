@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PampaDevs.BuildingBlocks.Bus;
 using PampaDevs.BuildingBlocks.Domain;
-using PampaDevs.BuildingBlocks.Domain.Events;
 using PampaDevs.Utils.Extensions;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,9 +11,9 @@ namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 {
     public abstract class AppDbContext : DbContext
     {
-        private readonly IEnumerable<IDomainEventDispatcher> _eventBuses = null;
+        private readonly IEnumerable<IDomainDispatcher> _eventBuses = null;
 
-        protected AppDbContext(DbContextOptions options, IEnumerable<IDomainEventDispatcher> eventBuses = null)
+        protected AppDbContext(DbContextOptions options, IEnumerable<IDomainDispatcher> eventBuses = null)
             : base(options)
         {
             _eventBuses = eventBuses;
@@ -62,7 +61,7 @@ namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 
                 foreach(var @event in @events)
                 {
-                    _eventBuses.Select(async bus => await bus.Dispatch(@event));
+                    _eventBuses.Select(async bus => await bus.DispatchEvent(@event));
                 }
 
                 aggregator.ClearUncommittedEvents();
