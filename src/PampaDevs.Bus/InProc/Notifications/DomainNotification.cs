@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PampaDevs.BuildingBlocks.Bus.InProc.Notifications
+namespace PampaDevs.Bus.InProc.Notifications
 {
     public class DomainNotification : Event
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PampaDevs.BuildingBlocks.Bus
+namespace PampaDevs.Bus
 {
     public interface IEvent : IMessage
     {

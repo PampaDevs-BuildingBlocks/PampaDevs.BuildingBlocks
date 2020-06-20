@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PampaDevs.BuildingBlocks.Bus;
+using PampaDevs.Bus;
 using PampaDevs.BuildingBlocks.Domain;
 using PampaDevs.Utils.Extensions;
 using System.Collections.Generic;

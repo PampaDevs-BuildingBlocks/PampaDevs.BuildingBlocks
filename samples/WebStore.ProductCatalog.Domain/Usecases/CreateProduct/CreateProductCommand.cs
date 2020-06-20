@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using PampaDevs.BuildingBlocks.Bus.InProc;
+using PampaDevs.Bus.InProc;
 using System;
 
 namespace WebStore.ProductCatalog.Domain.Usecases.CreateProduct

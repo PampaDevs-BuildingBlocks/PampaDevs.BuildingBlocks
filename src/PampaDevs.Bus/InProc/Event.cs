@@ -2,7 +2,7 @@
 using System;
 using static PampaDevs.Utils.Helpers.DateTimeHelper;
 
-namespace PampaDevs.BuildingBlocks.Bus.InProc
+namespace PampaDevs.Bus.InProc
 {
     public abstract class Event : Message, IEvent, INotification
     {

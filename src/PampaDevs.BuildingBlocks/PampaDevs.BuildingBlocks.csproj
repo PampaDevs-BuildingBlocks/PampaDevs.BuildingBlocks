@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PampaDevs.BuildingBlocks.Bus\PampaDevs.BuildingBlocks.Bus.csproj" />
+    <ProjectReference Include="..\PampaDevs.Bus\PampaDevs.Bus.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace PampaDevs.BuildingBlocks.Bus
+namespace PampaDevs.Bus
 {
     public interface IDomainDispatcher
     {

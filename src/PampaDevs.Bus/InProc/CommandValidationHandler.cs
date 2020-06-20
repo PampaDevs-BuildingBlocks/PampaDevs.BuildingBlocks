@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 using MediatR;
-using PampaDevs.BuildingBlocks.Bus.InProc.Notifications;
+using PampaDevs.Bus.InProc.Notifications;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PampaDevs.BuildingBlocks.Bus.InProc
+namespace PampaDevs.Bus.InProc
 {
     public class CommandValidationHandler<TCommand, TCommandValidator, TCommandResponse> : IPipelineBehavior<TCommand, TCommandResponse>
         where TCommand : Command<TCommandValidator, TCommandResponse>

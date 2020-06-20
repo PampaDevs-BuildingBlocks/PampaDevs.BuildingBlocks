@@ -2,7 +2,7 @@
 using FluentValidation.Results;
 using MediatR;
 
-namespace PampaDevs.BuildingBlocks.Bus.InProc
+namespace PampaDevs.Bus.InProc
 {
     public abstract class Command<TCommandValidator, TCommandResponse> : Message, ICommand<TCommandValidator>, IRequest<TCommandResponse>
         where TCommandValidator : IValidator, new()

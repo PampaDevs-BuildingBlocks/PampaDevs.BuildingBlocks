@@ -1,7 +1,7 @@
 ﻿using System;
 using static PampaDevs.Utils.Helpers.IdHelper;
 
-namespace PampaDevs.BuildingBlocks.Bus
+namespace PampaDevs.Bus
 {
     public interface IMessage
     {

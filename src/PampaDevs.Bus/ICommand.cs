@@ -2,7 +2,7 @@
 using FluentValidation.Results;
 using MediatR;
 
-namespace PampaDevs.BuildingBlocks.Bus
+namespace PampaDevs.Bus
 {
     public interface ICommand<TCommandValidator> : IMessage
         where TCommandValidator : IValidator, new()

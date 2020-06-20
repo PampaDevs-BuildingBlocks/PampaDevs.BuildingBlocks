@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.Threading.Tasks;
 
-namespace PampaDevs.BuildingBlocks.Bus.InProc
+namespace PampaDevs.Bus.InProc
 {
     public class InMemoryBus : IDomainDispatcher
     {
