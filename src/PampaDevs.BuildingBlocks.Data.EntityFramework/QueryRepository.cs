@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PampaDevs.BuildingBlocks.Data.EfCore
+namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 {
     public class QueryRepository<TEntity, TId> : QueryRepository<DbContext, TEntity, TId>
            where TEntity : class, IAggregateRoot<TId>

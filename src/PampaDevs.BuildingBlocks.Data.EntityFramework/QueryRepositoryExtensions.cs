@@ -10,7 +10,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace PampaDevs.BuildingBlocks.Data.EfCore
+namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 {
     public static class QueryRepositoryExtensions
     {

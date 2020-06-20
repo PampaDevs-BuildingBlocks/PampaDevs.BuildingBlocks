@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PampaDevs.BuildingBlocks.Data.EfCore
+namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 {
     public static class EfUnitOfWorkExtensions
     {

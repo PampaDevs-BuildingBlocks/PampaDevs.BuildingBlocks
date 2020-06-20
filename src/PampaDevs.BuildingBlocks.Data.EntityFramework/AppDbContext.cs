@@ -2,14 +2,13 @@
 using PampaDevs.BuildingBlocks.Domain;
 using PampaDevs.BuildingBlocks.Domain.Events;
 using PampaDevs.Utils.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PampaDevs.BuildingBlocks.Data.EfCore
+namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 {
     public abstract class AppDbContext : DbContext
     {

@@ -30,6 +30,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PampaDevs.BuildingBlocks.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Security.Jwt", "src\PampaDevs.BuildingBlocks.Security.Jwt\PampaDevs.BuildingBlocks.Security.Jwt.csproj", "{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PampaDevs.BuildingBlocks.Data.EntityFramework", "src\PampaDevs.BuildingBlocks.Data.EntityFramework\PampaDevs.BuildingBlocks.Data.EntityFramework.csproj", "{9DFF4C19-0012-4977-8F44-CAD4783A9713}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFF4C19-0012-4977-8F44-CAD4783A9713}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{7ED356BB-92CA-4256-8C51-E83FBF4D5AA6} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
 		{F8303EBE-C813-4AA2-A3D3-35026C6ED301} = {7ED356BB-92CA-4256-8C51-E83FBF4D5AA6}
 		{FBF5F00E-872D-4F00-BFAF-E8C1ACF2B3B8} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
+		{9DFF4C19-0012-4977-8F44-CAD4783A9713} = {5846C537-1C68-4FAF-82F0-A755AD00160E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F06FACF9-159B-45CE-82E4-58FB0AA62302}
