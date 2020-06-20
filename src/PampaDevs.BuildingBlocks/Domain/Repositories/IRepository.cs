@@ -8,7 +8,5 @@ namespace PampaDevs.BuildingBlocks.Domain.Repositories
         TEntity Update(TEntity entity);
         int Delete(TEntity entity);
         Task<TEntity> AddAsync(TEntity entity);
-        Task<TEntity> UpdateAsync(TEntity entity);
-        Task<int> DeleteAsync(TEntity entity);
     }
 }

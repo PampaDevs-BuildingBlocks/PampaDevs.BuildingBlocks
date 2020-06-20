@@ -38,12 +38,5 @@ namespace PampaDevs.BuildingBlocks.Security.Jwt
 
             return tokenHandler.WriteToken(token);
         }
-
-        private static long ToUnixEpochDate(DateTime date)
-        {
-            var timespan = (date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero));
-
-            return (long)Math.Round(timespan.TotalSeconds);
-        }
     }
 }

@@ -2,8 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
+using PampaDevs.Utils;
 using System.Text;
 
 namespace PampaDevs.BuildingBlocks.Security.Jwt
@@ -12,9 +11,8 @@ namespace PampaDevs.BuildingBlocks.Security.Jwt
     {
         public static IServiceCollection AddJwtConfiguration(this IServiceCollection services, IConfiguration configuration, string jwtConfigSection = null)
         {
-            // TODO: Change to Ensure.Arguments
-            if (services == null) throw new ArgumentException(nameof(services));
-            if (configuration == null) throw new ArgumentException(nameof(configuration));
+            Ensure.Argument.NotNull(services);
+            Ensure.Argument.NotNull(configuration);            
 
             var appSettingsSection = configuration.GetSection(jwtConfigSection ?? "JwtConfig");
             services.Configure<JwtSettings>(appSettingsSection);

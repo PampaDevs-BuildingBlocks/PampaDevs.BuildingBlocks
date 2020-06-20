@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 using Xunit;
 using Xunit.Sdk;
@@ -10,7 +11,7 @@ namespace PampaDevs.Utils.Tests
     {
         [Fact]
         public void That_WhenValidCondition_ShouldNotThrowException()
-        {
+        {            
             Ensure.That(true);            
         }
 
