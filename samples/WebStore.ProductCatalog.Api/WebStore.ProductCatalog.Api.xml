@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebStore.ProductCatalog.Api</name>
+    </assembly>
+    <members>
+        <member name="M:WebStore.ProductCatalog.Api.Controllers.ProductController.CreateProduct(WebStore.ProductCatalog.Api.Dtos.ProductDto)">
+            <summary>
+            Create Product
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

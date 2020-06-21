@@ -4,8 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Projects\MyProjects\PampaDevs\PampaDevs.BuildingBlocks\samples\WebStore.ProductCatalog.Api\WebStore.ProductCatalog.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
+  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\src\PampaDevs.BuildingBlocks\PampaDevs.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\WebStore.ProductCatalog.Domain\WebStore.ProductCatalog.Domain.csproj" />
   </ItemGroup>
 
 

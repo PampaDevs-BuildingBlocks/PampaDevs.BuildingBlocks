@@ -26,6 +26,11 @@ namespace PampaDevs.Bus.InProc.Notifications
             return _notifications;
         }
 
+        public virtual List<string> GetNotificationErrors()
+        {
+            return _notifications.Select(x => x.Value).ToList();
+        }
+
         public virtual bool HasNotifications()
         {
             return GetNotifications().Any();

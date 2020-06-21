@@ -11,9 +11,9 @@ namespace PampaDevs.Bus.InProc
             _mediator = mediator;
         }
 
-        public async Task DispatchCommand<T>(T command)
+        public async Task<object> DispatchCommand<T>(T command)
         {
-            await _mediator.Send(command);
+            return await _mediator.Send(command);
         }
 
         public async Task DispatchEvent<T>(T @event)
