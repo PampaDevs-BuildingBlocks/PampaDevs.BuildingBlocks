@@ -22,7 +22,7 @@ namespace WebStore.ProductCatalog.Domain.Usecases.CreateProduct
             var product = Product.Of(request);
             //var created = await productRepository.AddAsync(product);
 
-            return new CreateProductCommandResponse(Guid.Empty);
+            return new CreateProductCommandResponse() { Product = product };
         }
     }
 }

@@ -6,6 +6,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>D:\Projects\MyProjects\PampaDevs\PampaDevs.BuildingBlocks\samples\WebStore.ProductCatalog.Api\WebStore.ProductCatalog.Api.xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Projects\MyProjects\PampaDevs\PampaDevs.BuildingBlocks\samples\WebStore.ProductCatalog.Api\WebStore.ProductCatalog.Api.xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

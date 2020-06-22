@@ -10,8 +10,6 @@ namespace PampaDevs.BuildingBlocks.Domain
         {
             Id = id;
             DateCreated = NewDateTime();
-
-            ValidateCreation();
         }
 
         [Key] public TId Id { get; protected set; }

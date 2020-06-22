@@ -4,12 +4,14 @@
         <name>WebStore.ProductCatalog.Api</name>
     </assembly>
     <members>
-        <member name="M:WebStore.ProductCatalog.Api.Controllers.ProductController.CreateProduct(WebStore.ProductCatalog.Api.Dtos.ProductDto)">
+        <member name="M:WebStore.ProductCatalog.Api.Controllers.V1.ProductController.CreateProduct(WebStore.ProductCatalog.Api.Dtos.ProductDto)">
             <summary>
             Create Product
             </summary>
             <param name="dto"></param>
-            <returns></returns>
+            <returns>A newly created Product</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If there was a error processing the request</response>
         </member>
     </members>
 </doc>

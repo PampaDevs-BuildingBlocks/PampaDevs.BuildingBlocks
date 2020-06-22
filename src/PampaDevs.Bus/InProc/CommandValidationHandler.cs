@@ -32,7 +32,9 @@ namespace PampaDevs.Bus.InProc
 
                 foreach (var error in command.ValidationResult.Errors)
                 {
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
                     _dispatcher.DispatchEvent(new DomainNotification(command.MessageType, error.ErrorMessage));
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
                 }
 
                 return default;
@@ -41,9 +43,6 @@ namespace PampaDevs.Bus.InProc
             {
                 return await next();
             }
-            //if (IsValidCommand(request))
-            //    return default(TRequestResponse);
-
         }
     }
 }

@@ -2,14 +2,15 @@
 using Microsoft.AspNetCore.Mvc;
 using PampaDevs.BuildingBlocks.Infrastructure;
 
-namespace WebStore.ProductCatalog.Api.Controllers
+namespace WebStore.ProductCatalog.Api.Controllers.V1
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
+    [Produces("application/json")]
     public class InfoController : ControllerBase
     {
         [HttpGet]
-        [Route("info")]
+        [Route("")]
         public ActionResult<SystemInfo> Info()
         {
             return new JsonResult(Assembly.GetExecutingAssembly().GetSystemInfo());

@@ -4,7 +4,7 @@ using PampaDevs.BuildingBlocks.Application;
 using PampaDevs.Bus;
 using PampaDevs.Bus.InProc.Notifications;
 
-namespace WebStore.ProductCatalog.Api.Controllers
+namespace WebStore.ProductCatalog.Api.Controllers.V1
 {
     public abstract class ApiController : ControllerBase
     {

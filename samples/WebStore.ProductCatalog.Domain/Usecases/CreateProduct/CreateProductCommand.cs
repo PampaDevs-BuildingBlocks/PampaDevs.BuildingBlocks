@@ -1,6 +1,8 @@
 ﻿using FluentValidation;
+using PampaDevs.Bus;
 using PampaDevs.Bus.InProc;
 using System;
+using WebStore.ProductCatalog.Domain.Models;
 
 namespace WebStore.ProductCatalog.Domain.Usecases.CreateProduct
 {
@@ -15,12 +17,7 @@ namespace WebStore.ProductCatalog.Domain.Usecases.CreateProduct
 
     public class CreateProductCommandResponse
     {
-        public CreateProductCommandResponse(Guid id)
-        {
-            Id = id;
-        }
-
-        public Guid Id { get; set; }
+        public Product Product { get; set; }
     }
 
     public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>

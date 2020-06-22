@@ -52,8 +52,9 @@ namespace WebStore.ProductCatalog.Api
                     License = new OpenApiLicense
                     {
                         Name = "Use under MIT"
-                    }
+                    }                    
                 });
+                
 
                 // Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -61,6 +62,7 @@ namespace WebStore.ProductCatalog.Api
                 c.IncludeXmlComments(xmlPath);
             });
 
+            services.AddRouting(options => options.LowercaseUrls = true);
             services.AddControllers();
         }
 
@@ -83,7 +85,7 @@ namespace WebStore.ProductCatalog.Api
                 c.RoutePrefix = string.Empty;
             });
 
-            app.UseRouting();
+            app.UseRouting();            
 
             app.UseAuthorization();
 
