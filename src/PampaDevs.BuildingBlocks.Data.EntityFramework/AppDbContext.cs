@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ReflectionMagic;
 
 namespace PampaDevs.BuildingBlocks.Data.EntityFramework
 {
@@ -52,11 +53,11 @@ namespace PampaDevs.BuildingBlocks.Data.EntityFramework
                 .Entries()
                 .Select(e => e.Entity)
                 .Where(e => e.GetType().BaseType.IsGenericType && e.GetType().BaseType.GetGenericTypeDefinition().IsAssignableFrom(typeof(AggregateRoot<>)))
-                .Where(e => e.ToDynamic().GetUncommittedEvents().Count > 0);
+                .Where(e => e.AsDynamic().GetUncommittedEvents().Count > 0);
 
             foreach(var entity in domainEntities)
             {
-                var aggregator = entity.ToDynamic();
+                var aggregator = entity.AsDynamic();
                 var @events = aggregator.GetUncommittedEvents() as List<IEvent>;
 
                 foreach(var @event in @events)

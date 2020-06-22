@@ -1,14 +1,18 @@
 ﻿using FluentValidation;
 using MediatR;
 using PampaDevs.Bus.InProc.Notifications;
+using PampaDevs.Utils.Extensions;
+using ReflectionMagic;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace PampaDevs.Bus.InProc
 {
-    public class CommandValidationHandler<TCommand, TCommandValidator, TCommandResponse> : IPipelineBehavior<TCommand, TCommandResponse>
-        where TCommand : Command<TCommandValidator, TCommandResponse>
-        where TCommandValidator : IValidator, new()
+    public class CommandValidationHandler<TRequest, TRequestResponse> : IPipelineBehavior<TRequest, TRequestResponse>
+        where TRequest : IRequest<TRequestResponse>        
     {
         private readonly IDomainDispatcher _dispatcher;
 
@@ -17,26 +21,29 @@ namespace PampaDevs.Bus.InProc
             _dispatcher = dispatcher;
         }
 
-        public async Task<TCommandResponse> Handle(TCommand command, CancellationToken cancellationToken, RequestHandlerDelegate<TCommandResponse> next)
+        public async Task<TRequestResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TRequestResponse> next)
         {
-            if (IsValidCommand(command))
-                return default(TCommandResponse);
-
-            var response = await next();
-
-            return response;
-        }
-
-        private bool IsValidCommand(TCommand command)
-        {
-            if (command.IsValid()) return true;
-
-            foreach (var error in command.ValidationResult.Errors)
+            if (request.GetType().BaseType.IsGenericType && request.GetType().BaseType.GetGenericTypeDefinition().IsAssignableFrom(typeof(Command<,>)))
             {
-                _dispatcher.DispatchEvent(new DomainNotification(command.MessageType, error.ErrorMessage));
-            }
+                var command = request.AsDynamic();
 
-            return false;
+                if(command.IsValid())
+                    return await next();
+
+                foreach (var error in command.ValidationResult.Errors)
+                {
+                    _dispatcher.DispatchEvent(new DomainNotification(command.MessageType, error.ErrorMessage));
+                }
+
+                return default;
+            }
+            else
+            {
+                return await next();
+            }
+            //if (IsValidCommand(request))
+            //    return default(TRequestResponse);
+
         }
     }
 }

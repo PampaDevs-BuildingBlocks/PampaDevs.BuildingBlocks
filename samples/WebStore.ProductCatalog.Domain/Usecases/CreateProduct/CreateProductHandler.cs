@@ -9,20 +9,20 @@ namespace WebStore.ProductCatalog.Domain.Usecases.CreateProduct
 {
     public class CreateProductHandler : IRequestHandler<CreateProductCommand, CreateProductCommandResponse>
     {
-        private readonly IEfUnitOfWork _unitOfWork;
+        //private readonly IEfUnitOfWork _unitOfWork;
 
-        public CreateProductHandler(IEfUnitOfWork unitOfWork)
+        public CreateProductHandler(/*IEfUnitOfWork unitOfWork*/)
         {
-            _unitOfWork = unitOfWork;
+            //_unitOfWork = unitOfWork;
         }
 
         public async Task<CreateProductCommandResponse> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {            
-            var productRepository = _unitOfWork.Repository<Product, Guid>();
+            //var productRepository = _unitOfWork.Repository<Product, Guid>();
             var product = Product.Of(request);
-            var created = await productRepository.AddAsync(product);
+            //var created = await productRepository.AddAsync(product);
 
-            return new CreateProductCommandResponse(created.Id);
+            return new CreateProductCommandResponse(Guid.Empty);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PampaDevs.BuildingBlocks.Bus;
+using PampaDevs.Bus.InProc;
+using PampaDevs.Bus.InProc.Notifications;
+using WebStore.ProductCatalog.Domain.Usecases.CreateProduct;
 
 namespace WebStore.ProductCatalog.Api
 {
@@ -27,6 +32,9 @@ namespace WebStore.ProductCatalog.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddInProcBus(typeof(Startup), typeof(CreateProductCommand));
+            services.AddScoped<IRequestHandler<CreateProductCommand, CreateProductCommandResponse>, CreateProductHandler>();
+
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
